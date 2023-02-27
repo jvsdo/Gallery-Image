@@ -1,0 +1,31 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gallery_image {
+  flex-basis: 200px;
+  height: 150px;
+  margin: 5px;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery_image:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  .gallery_image {
+    flex-basis: calc(50% - 10px);
+    height: 200px;
+  }
+}
